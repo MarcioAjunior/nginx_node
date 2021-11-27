@@ -1,0 +1,35 @@
+head
+    title code education
+    style
+      include style.css
+body#bd
+
+ul
+        
+
+
+div#main
+    div#title 
+        h1#id Bem vindo, Full Cycle Rocks!
+    
+    div#formulario
+        form#form(method="POST" action="/")
+            input(type="text" id="idnome" name="nome" placeholder="Insira um nome" required)       
+            button(type="submit")#button Adicionar
+                
+
+    div#table
+        table
+            tr
+                th(style= "width : 2%") ID
+                th(style="width : 97%") NOME
+                th(style="width : 1%") AÇÃO
+                    // 
+           
+            for people in peoples
+                tr
+                    th(style= "width : 2%")=people.id
+                    th(style="width : 97%")=people.nome
+                    th(style="width : 1%")
+                        form(method="POST" action=`/${people.id}?`)
+                            button#button2 Excluir
