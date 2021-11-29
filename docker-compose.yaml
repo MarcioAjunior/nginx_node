@@ -29,6 +29,7 @@ services:
       - nginx-node-db
     volumes:
       - ./node:/node
+      - /node/node_modules
     depends_on:
         - db
     
